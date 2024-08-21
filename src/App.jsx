@@ -99,6 +99,9 @@ function App() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          Created by Andrew Nerud
+        </NavbarItem>
       </NavbarContent>
     </Navbar>
 
