@@ -1,8 +1,9 @@
-import React, { Suspense, useState, useEffect, useRef } from 'react'
+import React, { Suspense, useState, useEffect, useRef } from 'react';
 import { Button, Card, CardHeader, Image, Navbar, NavbarBrand, NavbarContent, NavbarItem, Pagination, Skeleton } from "@nextui-org/react";
-import SearchIcon from './assets/search.svg'
-import MovieCard from './components/movie-card'
-import './App.css'
+import SearchIcon from './assets/search.svg';
+import AppIcon from './assets/favicon.jpg';
+import MovieCard from './components/movie-card';
+import './App.css';
 
 function App() {
   const startingMessage = 'Search to find movies';
@@ -88,7 +89,7 @@ function App() {
         <Image
           width={50}
           alt="FilmHunt logo"
-          src="/src/assets/favicon.jpg"
+          src={ AppIcon }
           className='logo-img'
         />
         <p className="font-bold website-title">&nbsp;&nbsp;FilmHunt</p>
