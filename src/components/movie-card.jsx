@@ -9,9 +9,7 @@ const MovieCard = ({movie}) => {
     const getFullInfo = async () => {
         const response = await fetch(`${API_URL}&t=${movie.Title}&plot=full`);
         const data = await response.json();
-        console.log(data);
         setInfo(data);
-        console.log(info.Ratings)
         onOpen();
     }
         
