@@ -59,7 +59,7 @@ body {
   box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
 }
 
-h1 {
+/* h1 {
   font-size: 3rem;
   letter-spacing: 0.9px;
   background: linear-gradient(
@@ -71,7 +71,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
-}
+} */
 
 .subtitle {
   color: #ffffff;
@@ -175,6 +175,33 @@ ModalHeader, b {
   flex-wrap: wrap;
 }
 
+.home-page {
+  display: flex;
+  flex-basis: content;
+  flex-direction: column;
+  align-content: center;
+  align-self: center;
+  justify-content: space-between;
+  min-height: 400px;
+  height: 40%;
+}
+
+.home-page>h1, .home-page>Button, .home-page>h3 {
+  margin-inline: 10px;
+}
+
+.home-page>h1 {
+  font-size: 2.5rem;
+  color: #b4e4f9;
+  font-family: var(--font-raleway);
+  margin-block: 10%;
+}
+
+.home-page > Button {
+  margin-top: auto; /* This pushes the button to the bottom */
+  margin-bottom: 10%;
+}
+
 .website-title {
   font-size: 30px;
   color: #b4e4f9;
@@ -183,7 +210,7 @@ ModalHeader, b {
 
 .movie {
   width: 310px;
-  height: 460px;
+  height: 460px !important;
   margin: 1.5rem;
 
   position: relative;

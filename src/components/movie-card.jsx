@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Tooltip, useDisclosure } from "@nextui-org/react";
+import { Card, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Tooltip, useDisclosure } from "@nextui-org/react";
 
 const MovieCard = ({movie}) => {
     const [info, setInfo] = useState({});
@@ -18,17 +18,19 @@ const MovieCard = ({movie}) => {
     return (
         <>
         <Tooltip showArrow={true} content={"View "+ (movie.Type ?? 'movie').toLowerCase() +" info"} color="default" placement="top">
-            <div className='movie' onClick={() => getFullInfo()}>
-                <div>
-                    <p>{ movie.Year }</p>
-                </div>
+            <div onClick={() => getFullInfo()}>
+                <Card className='movie'>
+                    <div>
+                        <p>{ movie.Year }</p>
+                    </div>
                     <div>
                         <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/400'} alt={movie.title}/>
                     </div>
-                <div>
-                <span>{movie.Type}</span>
-                    <h3>{movie.Title}</h3>
-                </div>
+                    <div>
+                    <span>{movie.Type}</span>
+                        <h3>{movie.Title}</h3>
+                    </div>
+                </Card>
             </div>
         </Tooltip>
 
@@ -37,6 +39,7 @@ const MovieCard = ({movie}) => {
             isOpen={isOpen} 
             onClose={onClose} 
             className="dark"
+            scrollBehavior="inside"
         >
             <ModalContent>
                 {(onClose) => (
