@@ -1,8 +1,14 @@
-# React + Vite
+# React + Vite + NextUI Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is made from the above resources: React, Vite, Tailwind CSS, and NextUI
 
-Currently, two official plugins are available:
+This web application gets movies from ombd free api and displays them in pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It is an overall ReactJS application that uses NextUI and Tailwind CSS for styling purposes
+
+To run, just run the command:
+    npm run dev
+
+B
+efore commiting make sure to
+    npm run lint-fix
