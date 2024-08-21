@@ -1,5 +1,5 @@
 import React, { Suspense, useState, useEffect, useRef } from 'react'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Pagination } from "@nextui-org/react";
+import { Image, Navbar, NavbarBrand, NavbarContent, NavbarItem, Pagination } from "@nextui-org/react";
 import SearchIcon from './assets/search.svg'
 import MovieCard from './components/movie-card'
 import './App.css'
@@ -49,7 +49,13 @@ function App() {
     <>
     <Navbar>
       <NavbarBrand>
-        <p className="font-bold website-title">FilmHunt</p>
+        <Image
+          width={50}
+          alt="FilmHunt logo"
+          src="/src/assets/favicon.jpg"
+          className='logo-img'
+        />
+        <p className="font-bold website-title">&nbsp;&nbsp;FilmHunt</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>

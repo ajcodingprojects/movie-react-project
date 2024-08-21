@@ -9,6 +9,8 @@ It is an overall ReactJS application that uses NextUI and Tailwind CSS for styli
 To run, just run the command:
     npm run dev
 
-B
-efore commiting make sure to
+Before commiting make sure to
     npm run lint-fix
+
+Project started from Youtube Video: "React JS Full Course 2023 | Build an App and Master React in 1 Hour" by JavaScript Mastery
+Additional aspects added on top of the code after creation.

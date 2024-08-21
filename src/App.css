@@ -81,6 +81,10 @@ ModalHeader, b {
   color: #b4e4f9;
 }
 
+.logo-img {
+  margin-right: 20px;
+}
+
 .search {
   width: 71%;
   margin: 4rem 0 2rem;

@@ -17,7 +17,7 @@ const MovieCard = ({movie}) => {
         
     return (
         <>
-        <Tooltip showArrow={true} content="View movie info" color="default" placement="top">
+        <Tooltip showArrow={true} content={"View "+ (movie.Type ?? 'movie').toLowerCase() +" info"} color="default" placement="top">
             <div className='movie' onClick={() => getFullInfo()}>
                 <div>
                     <p>{ movie.Year }</p>
@@ -41,16 +41,37 @@ const MovieCard = ({movie}) => {
             <ModalContent>
                 {(onClose) => (
                     <>
-                    <ModalHeader className="flex flex-col gap-1" style={{color: '#b4e4f9'}}>{info?.Title}</ModalHeader>
+                    <ModalHeader className="flex flex-col gap-1" style={{color: '#b4e4f9', fontSize: '26px'}}>{info?.Title}</ModalHeader>
                     <ModalBody>
                         <p> 
                         {info?.Plot}
                         </p>
-                        <p><b>Notable Actors</b>: {info?.Actors}</p>
-                        <p><b>Runtime</b>: {info?.Runtime}</p>
-                        <p><b>Year</b>: {info?.Year}</p>
                         {
-                            info?.Ratings != null ?
+                            info?.Actors !== "N/A" ?
+                            (<p><b>Notable Actors</b>: {info?.Actors}</p>)
+                            :
+                            ''
+                        }
+                        {
+                            info?.Director !== "N/A" ?
+                            (<p><b>Director</b>: {info?.Director}</p>)
+                            :
+                            ''
+                        }
+                        {
+                            info?.Runtime !== "N/A" ?
+                            (<p><b>Runtime</b>: {info?.Runtime}</p>)
+                            :
+                            ''
+                        }
+                        {
+                            info?.Year !== "N/A" ?
+                            (<p><b>Year</b>: {info?.Year}</p>)
+                            :
+                            ''
+                        }
+                        {
+                            info?.Ratings != null && info?.Ratings.length > 0 ?
                             (
                                 <>
                                     <p><b>Ratings</b>:</p>
