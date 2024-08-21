@@ -1,7 +1,8 @@
 import React, { Suspense, useState, useEffect, useRef } from 'react';
-import { Button, Card, CardHeader, Image, Navbar, NavbarBrand, NavbarContent, NavbarItem, Pagination, Skeleton } from "@nextui-org/react";
+import { Button, Card, CardHeader, Image, Navbar, NavbarBrand, NavbarContent, NavbarItem, Pagination, Skeleton, Tooltip } from "@nextui-org/react";
 import SearchIcon from './assets/search.svg';
 import AppIcon from './assets/favicon.jpg';
+import InfoIcon from './assets/info.svg';
 import MovieCard from './components/movie-card';
 import './App.css';
 
@@ -70,8 +71,8 @@ function App() {
 
   const showHomePage = () => {
     return (
-      <div>
-        <Card>
+      <div className='home-div'>
+        <Card className='home-page'>
           <CardHeader className='home-page'>
             <h1 className="font-bold text-large">Welcome!</h1>
             <h3 className="font-bold text-large">To begin searching for films, press the button below</h3>
@@ -85,7 +86,7 @@ function App() {
   return (
     <>
     <Navbar>
-      <NavbarBrand>
+      <NavbarBrand style={{width: "fit-content"}}>
         <Image
           width={50}
           alt="FilmHunt logo"
@@ -93,6 +94,14 @@ function App() {
           className='logo-img'
         />
         <p className="font-bold website-title">&nbsp;&nbsp;FilmHunt</p>
+        <Tooltip showArrow={true} content='Created by Andrew Nerud'>
+          <Image
+            style={{maxWidth: '27px'}}
+            alt="info"
+            src={ InfoIcon }
+            className='info-img'
+          />
+        </Tooltip>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
@@ -101,7 +110,6 @@ function App() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          Created by Andrew Nerud
         </NavbarItem>
       </NavbarContent>
     </Navbar>

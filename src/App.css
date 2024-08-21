@@ -20,13 +20,14 @@ body {
 }
 
 .app {
-  padding: 4rem;
+  /* padding: 4rem; */
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%
+  width: 100%;
+  min-height: 75vh;
 }
 
 .inline {
@@ -83,6 +84,11 @@ ModalHeader, b {
 
 .logo-img {
   margin-right: 20px;
+}
+
+.info-img {
+  color: #ffffff;
+  padding-left: 10px;
 }
 
 .search {
@@ -173,6 +179,11 @@ ModalHeader, b {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.hom-div {
+  display:flex;
+  margin-top: 200px;
 }
 
 .home-page {
