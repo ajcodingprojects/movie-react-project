@@ -4,7 +4,7 @@ import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Toolt
 const MovieCard = ({movie}) => {
     const [info, setInfo] = useState({});
     const {isOpen, onOpen, onClose} = useDisclosure();
-    const API_URL = 'http://www.omdbapi.com?apikey=c032e2d7';
+    const API_URL = 'https://www.omdbapi.com?apikey=c032e2d7';
 
     const getFullInfo = async () => {
         const response = await fetch(`${API_URL}&t=${movie.Title}&plot=full`);

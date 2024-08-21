@@ -13,7 +13,7 @@ function App() {
   const [page, setPage] = useState(1);
 
   // c032e2d7
-  const API_URL = 'http://www.omdbapi.com?apikey=c032e2d7';
+  const API_URL = 'https://www.omdbapi.com?apikey=c032e2d7';
 
   const searchMovies = async (title, extraURI) => {
     const response = await fetch(`${API_URL}&plot=full&s=${title}${extraURI != null ? extraURI : ''}`);
